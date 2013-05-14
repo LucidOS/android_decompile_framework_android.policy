@@ -7958,40 +7958,10 @@
 
     iput v0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 3020
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
-
-    if-eqz v0, :cond_1b
-
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
-
-    invoke-interface {v0}, Landroid/view/WindowManagerPolicy$WindowState;->getSurfaceLayer()I
-
-    move-result v0
-
     .line 3022
-    :goto_1a
-    return v0
-
-    .line 3021
-    :cond_1b
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mNavigationBar:Landroid/view/WindowManagerPolicy$WindowState;
-
-    if-eqz v0, :cond_26
-
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mNavigationBar:Landroid/view/WindowManagerPolicy$WindowState;
-
-    invoke-interface {v0}, Landroid/view/WindowManagerPolicy$WindowState;->getSurfaceLayer()I
-
-    move-result v0
-
-    goto :goto_1a
-
-    .line 3022
-    :cond_26
     const/4 v0, 0x0
 
-    goto :goto_1a
+     return v0
 .end method
 
 .method goHome()Z
